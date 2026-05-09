@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Dev With Rabbil — Web Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('DOM loaded, setting up observers...');
+
+      // Intersection Observer for fade-in elements
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+              // Unobserve after animation to save resources
+              observer.unobserve(entry.target);
+            }, i * 80);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Use MutationObserver to watch for dynamically added .fade-in elements
+      const setupObservers = () => {
+        document.querySelectorAll('.fade-in:not(.observed)').forEach(el => {
+          observer.observe(el);
+          el.classList.add('observed'); // Mark as observed to avoid duplicate
+        });
+      };
+
+      // Initial setup
+      setupObservers();
+
+      // Watch for dynamically added content (since React will render after this)
+      const bodyObserver = new MutationObserver(() => {
+        setupObservers();
+      });
+
+      bodyObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      // Active nav link functionality
+      const updateActiveNavLink = () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        if (sections.length === 0 || navLinks.length === 0) return;
+
+        let current = '';
+        const scrollPosition = window.scrollY + 100; // Offset for better detection
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === `#${current}`) {
+            link.style.color = 'var(--lavender)';
+            link.style.borderBottom = '2px solid var(--lavender)';
+          } else {
+            link.style.color = '';
+            link.style.borderBottom = '';
+          }
+        });
+      };
+
+      // Wait a bit for React to render, then setup scroll listener
+      setTimeout(() => {
+        updateActiveNavLink();
+        window.addEventListener('scroll', updateActiveNavLink);
+      }, 500);
+
+      // Also set up a mutation observer to detect when nav links are added
+      const navObserver = new MutationObserver(() => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        if (navLinks.length > 0) {
+          updateActiveNavLink();
+          navObserver.disconnect(); // Stop once we have them
+        }
+      });
+
+      navObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
