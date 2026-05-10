@@ -3,20 +3,20 @@ const Contact = () => {
     {
       icon: "✉️",
       label: "EMAIL",
-      value: "hello@devwithrabbil.com",
-      href: "mailto:hello@devwithrabbil.com",
+      value: "career.rabbil@gmail.com",
+      href: "mailto:career.rabbil@gmail.com",
     },
     {
       icon: "💬",
       label: "WHATSAPP",
       value: "+880 · Message Me",
-      href: "https://wa.me/880XXXXXXXXXX",
+      href: "https://wa.me/8801846760532",
     },
     {
       icon: "🐙",
       label: "GITHUB",
-      value: "@devwithrabbil",
-      href: "https://github.com/devwithrabbil",
+      value: "@ImRabbil",
+      href: "https://github.com/ImRabbil",
     },
   ];
 
