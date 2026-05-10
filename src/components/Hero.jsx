@@ -58,7 +58,7 @@ const Terminal = () => (
       <div style={{ paddingLeft: "1.2rem" }}>
         <span className="t-key">"name"</span>
         <span style={{ color: "var(--overlay1)" }}>: </span>
-        <span className="t-str">"Rabbil Hasan"</span>
+        <span className="t-str">"Md. Rabbil Sarker"</span>
         <span style={{ color: "var(--overlay1)" }}>,</span>
       </div>
       <div style={{ paddingLeft: "1.2rem" }}>

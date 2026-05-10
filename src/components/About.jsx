@@ -49,7 +49,7 @@ const About = () => {
               <div className="avatar-ring">
                 <div className="avatar-initials">R</div>
               </div>
-              <div className="avatar-name">Rabbil Hasan</div>
+              <div className="avatar-name">Md. Rabbil Sarker</div>
               <div className="avatar-role">SENIOR FULL-STACK DEVELOPER</div>
               <div className="avatar-location">📍 Dhaka, Bangladesh</div>
               <div className="avail-dot">OPEN TO PROJECTS</div>
@@ -84,7 +84,7 @@ const About = () => {
               <span style={{ color: "var(--mauve)" }}>Not Just Websites</span>
             </h2>
             <p className="about-desc">
-              I'm Rabbil Hasan — the developer behind{" "}
+              I'm Md. Rabbil Sarker — the developer behind{" "}
               <strong style={{ color: "var(--mauve)" }}>
                 Dev With Rabbil (Web Solutions)
               </strong>
