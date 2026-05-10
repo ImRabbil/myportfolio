@@ -47,7 +47,9 @@ const About = () => {
           <div className="about-left fade-in">
             <div className="about-avatar">
               <div className="avatar-ring">
-                <div className="avatar-initials">R</div>
+                {/* <div className="avatar-initials"> */}
+                <img src="../images/rabbil.jpg" alt="Md. Rabbil Sarker" />
+                {/* </div> */}
               </div>
               <div className="avatar-name">Md. Rabbil Sarker</div>
               <div className="avatar-role">SENIOR FULL-STACK DEVELOPER</div>
