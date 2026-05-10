@@ -10,7 +10,7 @@ const clientProjects = [
     desc: "Full-featured clothing store with size/color variant management, EAV product model, and integrated bKash & SSLCommerz payment gateway.",
     tags: ["Laravel", "React", "bKash API"],
     tagColors: ["mauve", "teal", "peach"],
-    url: "https://yourproject1.com",
+    url: "https://kibanshoe.com",
     icon: "🛍️",
   },
   {
@@ -22,7 +22,7 @@ const clientProjects = [
     desc: "Electronics marketplace with advanced product filtering, warranty tracking, COD risk scoring, and automated Pathao courier integration for delivery.",
     tags: ["Laravel", "Inertia", "Pathao API"],
     tagColors: ["blue", "teal", "green"],
-    url: "https://yourproject2.com",
+    url: "https://oceansdreams.com",
     icon: "💻",
   },
   {
@@ -34,7 +34,7 @@ const clientProjects = [
     desc: "Vendor onboarding, commission management, per-vendor inventory, and a unified checkout experience for buyers. Multiple payment options supported.",
     tags: ["Laravel", "React", "Commission"],
     tagColors: ["teal", "blue", "yellow"],
-    url: "https://yourproject3.com",
+    url: "https://ecom.prodevs.com.bd",
     icon: "🏪",
   },
   {
@@ -46,7 +46,7 @@ const clientProjects = [
     desc: "Time-slot based delivery scheduling, perishable inventory control, bulk order discounts, and real-time stock level notifications via SMS.",
     tags: ["Laravel", "Tailwind", "SMS API"],
     tagColors: ["green", "teal", "peach"],
-    url: "https://yourproject4.com",
+    url: "https://unisalemart.com",
     icon: "🛒",
   },
   {
@@ -58,7 +58,7 @@ const clientProjects = [
     desc: "Boutique e-commerce with lookbook gallery, membership loyalty points, gift card system, and automated social media order notification flow.",
     tags: ["Laravel", "React", "Loyalty"],
     tagColors: ["mauve", "blue", "green"],
-    url: "https://yourproject5.com",
+    url: "https://hklifestyle.com.bd",
     icon: "👗",
   },
   {
@@ -70,7 +70,7 @@ const clientProjects = [
     desc: "High-volume accessories store with bulk pricing tiers, compatible device lookup, reseller portal, and Steadfast courier API for nationwide delivery.",
     tags: ["Laravel", "Inertia", "Steadfast"],
     tagColors: ["yellow", "teal", "blue"],
-    url: "https://yourproject6.com",
+    url: "https://projectkitsbd.com",
     icon: "📱",
   },
 ];
